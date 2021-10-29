@@ -1,12 +1,10 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
-import useAuth from '../../../hooks/useAuth';
-import logo from '../../../images/Aladin Logo.png';
+import logo from '../../../images/Aladin Logo Horizontal.png';
 
 const Header = () => {
-  const { user, logOut } = useAuth();
+  // const { user, logOut } = useAuth();
   return (
     <>
       <Navbar
@@ -31,13 +29,13 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/home#services">
               Services
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/home#doctors">
-              Doctors
+            <Nav.Link as={HashLink} to="/home#blogs">
+              Blogs
             </Nav.Link>
             <Nav.Link as={HashLink} to="/home#contact">
               Contact
             </Nav.Link>
-            {user?.email ? (
+            {/* {user?.email ? (
               <Button onClick={logOut} variant="secondary">
                 LogOut
               </Button>
@@ -48,7 +46,7 @@ const Header = () => {
             )}
             <Navbar.Text>
               Hlw: <a href="#login">{user?.displayName}</a>
-            </Navbar.Text>
+            </Navbar.Text> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>
