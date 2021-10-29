@@ -1,10 +1,13 @@
+import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/Aladin Logo Horizontal.png';
 
 const Header = () => {
-  // const { user, logOut } = useAuth();
+  const { user, logOut } = useAuth();
   return (
     <>
       <Navbar
@@ -35,7 +38,7 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/home#contact">
               Contact
             </Nav.Link>
-            {/* {user?.email ? (
+            {user?.email ? (
               <Button onClick={logOut} variant="secondary">
                 LogOut
               </Button>
@@ -44,9 +47,20 @@ const Header = () => {
                 Login
               </Nav.Link>
             )}
+
+            {/* {user?.email ? (
+              <Button onClick={logOut} variant="secondary">
+                MyOrders
+              </Button>
+            ) : (
+              <Nav.Link as={Link} to="/login">
+                Login
+              </Nav.Link>
+            )} */}
+
             <Navbar.Text>
               Hlw: <a href="#login">{user?.displayName}</a>
-            </Navbar.Text> */}
+            </Navbar.Text>
           </Navbar.Collapse>
         </Container>
       </Navbar>

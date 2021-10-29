@@ -3,9 +3,11 @@ import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Footer/Footer';
+import Booking from './Pages/Home/Booking/Booking/Booking';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -24,7 +26,9 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-
+            <PrivateRoute path="/booking/:serviceId">
+              <Booking></Booking>
+            </PrivateRoute>
             <Route path="/contact">
               <Contact></Contact>
             </Route>

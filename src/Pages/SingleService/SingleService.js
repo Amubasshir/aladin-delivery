@@ -11,7 +11,7 @@ const SingleService = ({ service }) => {
       <h2>{name}</h2>
 
       <p className="px-5">{description}</p>
-      <Link to={`/appointment/${id}`}>
+      <Link to={`/booking/${id}`}>
         <button className="btn btn-warning">Booking</button>
       </Link>
     </div>
