@@ -48,15 +48,15 @@ const Header = () => {
               </Nav.Link>
             )}
 
-            {/* {user?.email ? (
-              <Button onClick={logOut} variant="secondary">
+            {user?.email ? (
+              <Nav.Link as={Link} to="/myOrders">
                 MyOrders
-              </Button>
+              </Nav.Link>
             ) : (
-              <Nav.Link as={Link} to="/login">
+              <Nav.Link as={Link} to="/">
                 Login
               </Nav.Link>
-            )} */}
+            )}
 
             <Navbar.Text>
               Hlw: <a href="#login">{user?.displayName}</a>

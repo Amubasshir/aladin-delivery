@@ -5,7 +5,7 @@ const Booking = () => {
   const [booking, setBooking] = useState([]);
 
   useEffect(() => {
-    fetch('/service.json')
+    fetch('http://localhost:3000/booking/${bookingId}')
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, []);
@@ -19,6 +19,9 @@ const Booking = () => {
         <div className="col-lg-7 col-md-6 col-sm-12">
           <div class="row  ">
             <div class="col-md-12 login-form-1">
+              <h1> Welcome {booking.name}</h1>
+              <br />
+
               <h3>Book Your Product</h3>
 
               <div class="form-group">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './SingleService.css';
 
 const SingleService = ({ service }) => {
-  const { id, name, description, img } = service;
+  const { _id, name, description, img } = service;
   console.log(service);
   return (
     <div className="service pb-3 ">
@@ -11,7 +11,7 @@ const SingleService = ({ service }) => {
       <h2>{name}</h2>
 
       <p className="px-5">{description}</p>
-      <Link to={`/booking/${id}`}>
+      <Link to={`/booking/${_id}`}>
         <button className="btn btn-warning">Booking</button>
       </Link>
     </div>
