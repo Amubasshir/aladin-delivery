@@ -9,12 +9,14 @@ const AddService = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post('http://localhost:7000/delivery', data).then((res) => {
-      if (res.data.insertedId) {
-        alert('added successfully');
-        reset();
-      }
-    });
+    axios
+      .post('https://desolate-river-47123.herokuapp.com/delivery', data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert('added successfully');
+          reset();
+        }
+      });
   };
 
   return (

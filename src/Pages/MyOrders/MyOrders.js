@@ -6,7 +6,7 @@ const MyOrders = () => {
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:7000/delivery/${orderId}`)
+    fetch(`https://desolate-river-47123.herokuapp.com/delivery/${orderId}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, []);
