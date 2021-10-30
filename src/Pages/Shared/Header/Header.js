@@ -54,12 +54,12 @@ const Header = () => {
               </Nav.Link>
             ) : (
               <Nav.Link as={Link} to="/">
-                Login
+                Welcome
               </Nav.Link>
             )}
 
             <Navbar.Text>
-              Hlw: <a href="#login">{user?.displayName}</a>
+              <a href="#login">{user?.displayName}</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

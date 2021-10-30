@@ -7,6 +7,7 @@ import Footer from './Pages/Footer/Footer';
 import Booking from './Pages/Home/Booking/Booking/Booking';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
+import MyOrders from './Pages/MyOrders/MyOrders';
 import NotFound from './Pages/NotFound/NotFound';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Header from './Pages/Shared/Header/Header';
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route path="/addService">
               <AddService></AddService>
+            </Route>
+            <Route path="/myOrders">
+              <MyOrders></MyOrders>
             </Route>
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
